@@ -1,0 +1,17 @@
+.headerButton {
+    text-decoration: none;
+    color: var(--white);
+    margin: 5px;
+    font-weight: bold;
+}
+
+.headerButton:hover {
+    color: var(--accent);
+    transition: color 0.2s ease-in-out;
+}
+
+@media (max-width: 1130px) {
+    .headerButtonTitle {
+        display: none;
+    }
+}
