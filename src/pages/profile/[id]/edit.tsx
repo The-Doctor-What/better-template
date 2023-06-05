@@ -2,6 +2,7 @@ import {Layout, Link} from "@/components";
 import stylesError from "@/styles/error.module.css";
 import stylesEdit from "@/styles/edit.module.css";
 import stylesComponents from "@/styles/components.module.css";
+import stylesProfile from "@/styles/profile.module.css";
 import {GetServerSideProps} from "next";
 
 type ProfileEdit = {
@@ -38,9 +39,9 @@ export default function ProfileEditPage({user, sender, role}: ProfileEdit) {
     return (
         <Layout title={"Редактирование профиля"}>
             <section>
-                <div className={stylesEdit.profile}>
+                <div className={stylesProfile.profileMini}>
                     <img src={user.avatar} alt="Аватар"/>
-                    <div className={stylesEdit.profileInfo}>
+                    <div className={stylesProfile.profileInfo}>
                         <h3>{user.name}</h3>
                         <p>{role.name}</p>
                     </div>

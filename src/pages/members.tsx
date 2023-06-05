@@ -4,7 +4,7 @@ import stylesError from "@/styles/error.module.css";
 import {GetServerSideProps} from "next";
 import {getUsers} from "@/utils/getUser";
 import {getRoles} from "@/utils/getRole";
-import stylesEdit from "@/styles/edit.module.css";
+import stylesProfile from "@/styles/profile.module.css";
 
 type Members = {
     users: any,
@@ -28,11 +28,11 @@ export default function MembersPage({users, sender, roles}: Members) {
     return (
         <Layout title={"Пользователи"}>
             <h1>Список пользователей</h1>
-            <section className={`center flex-row flex-wrap ${stylesEdit.users}`}>
+            <section className={`center flex-row flex-wrap ${stylesProfile.users}`}>
                 {users.map((user: any) => (
-                    <LinkNext href={`/profile/${user.id}`} key={user.id} className={stylesEdit.profile}>
+                    <LinkNext href={`/profile/${user.id}`} key={user.id} className={stylesProfile.profileMini}>
                         <img src={user.avatar} alt="Аватар"/>
-                        <div className={stylesEdit.profileInfo}>
+                        <div className={stylesProfile.profileInfo}>
                             <h3>{user.name}</h3>
                             {roles.map((role: any) => (
                                 role.id === user.role ? (

@@ -4,6 +4,7 @@ import stylesProfile from "@/styles/profile.module.css";
 import {GetServerSideProps} from "next";
 import {getUser} from "@/utils/getUser";
 import {getRole} from "@/utils/getRole";
+import LinkNext from "next/link";
 
 type Profile = {
     user: any,
@@ -25,18 +26,29 @@ export default function ProfilePage({user, sender, role}: Profile) {
     }
 
     return (
-        <Layout title={"Профиль пользователя"}>
+        <Layout title={`Профиль ${user.name}`}>
+            {sender.self && sender.access < 2 ? <p className={stylesProfile.profileTitle}>Ваш профиль</p> :
+                <div className={stylesProfile.profileTitle}>
+                    <LinkNext href="/members"><i className="fa-solid fa-user-group"></i>
+                        <span className={stylesProfile.profileTitleText}> Список пользователей</span>
+                    </LinkNext>
+                    <span className={stylesProfile.slash}>/</span>
+                    <LinkNext href={user.id.toString()}>
+                        {user.name}
+                    </LinkNext>
+                </div>
+            }
             <section className={stylesProfile.profile}>
                 <img src={user.avatar} alt="Аватар"/>
                 <div className={stylesProfile.profileInfo}>
-                    <h2><i className="fa-solid fa-user"></i> {user.name}</h2>
+                    <h2>{user.name}</h2>
                     <p><i className={`fa-solid fa-${role.icon}`}></i> {role.name}</p>
                     <p><i className="fa-solid fa-envelope"></i> {user.email}</p>
                     <p><i className="fa-solid fa-phone"></i> {user.phone || "Не указан"}</p>
                     <p><i className="fa-solid fa-map-marker"></i> {user.address || "Не указан"}</p>
                 </div>
                 <div className={stylesProfile.profileActions}>
-                    {sender.access >= role.access || sender.self ? (
+                    {(sender.access > role.access && sender.access >= 3) || sender.self ? (
                         <>
                             <Link href={`${user.id}/edit`} icon="pen-to-square">Редактировать</Link>
                         </>
@@ -52,7 +64,7 @@ export const getServerSideProps: GetServerSideProps<Profile> = async (ctx) => {
         props: {
             user: null,
             sender: {
-                access: 6,
+                access: 5,
                 self: true,
                 token: null,
             },

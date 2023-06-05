@@ -11,3 +11,9 @@
     margin: 1rem;
     width: 400px;
 }
+
+@media (max-width: 530px) {
+    .errorSection {
+        width: 300px;
+    }
+}
