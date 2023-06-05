@@ -1,7 +1,7 @@
 import {Layout, Link} from "@/components";
 import stylesError from "@/styles/error.module.css";
 
-export default function Home() {
+export default function HomePage() {
     return (
         <Layout title={"Главная"}>
             <section className={`${stylesError.errorSection} center flex-column`}>

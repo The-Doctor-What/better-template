@@ -7,6 +7,8 @@
     gap: 1rem;
     align-items: center;
     border-radius: .75rem;
+    color: var(--white);
+    text-decoration: none;
 }
 
 .profile img {
@@ -29,7 +31,7 @@
 }
 
 .profile .profileInfo p {
-    color: var(--light-gray);
+    color: var(--light-gray2);
     margin: 0;
     font-size: .75rem;
 }
@@ -104,4 +106,18 @@
     margin-top: .5rem;
     color: var(--white);
     font-weight: 800;
+}
+
+.users .profile {
+    width: 300px;
+}
+
+.profile:active {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.profile:hover {
+    color: var(--white);
+    text-decoration: none;
 }

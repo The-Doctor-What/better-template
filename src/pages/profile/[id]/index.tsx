@@ -2,6 +2,8 @@ import {Layout, Link} from "@/components";
 import stylesError from "@/styles/error.module.css";
 import stylesProfile from "@/styles/profile.module.css";
 import {GetServerSideProps} from "next";
+import {getUser} from "@/utils/getUser";
+import {getRole} from "@/utils/getRole";
 
 type Profile = {
     user: any,
@@ -25,7 +27,7 @@ export default function ProfilePage({user, sender, role}: Profile) {
     return (
         <Layout title={"Профиль пользователя"}>
             <section className={stylesProfile.profile}>
-                <img src={user.avatar}/>
+                <img src={user.avatar} alt="Аватар"/>
                 <div className={stylesProfile.profileInfo}>
                     <h2><i className="fa-solid fa-user"></i> {user.name}</h2>
                     <p><i className={`fa-solid fa-${role.icon}`}></i> {role.name}</p>
@@ -58,30 +60,12 @@ export const getServerSideProps: GetServerSideProps<Profile> = async (ctx) => {
         },
     };
     try {
-
         const {id} = ctx.query;
 
-        const users = [{
-            id: 1,
-            name: "Mary_Wilson",
-            avatar: "https://137.74.244.142/uploads/posts/2022-03/thumbs/1646760865_26-adonius-club-p-devushka-za-kompyuterom-art-34.jpg",
-            role: 1,
-            email: "better@template.com",
-            phone: "+7 (999) 999-99-99",
-            address: "Москва, Красная площадь, 1",
-        }]
-
-        const roles = [{
-            id: 1,
-            name: "Developer",
-            icon: "code",
-            access: 6
-        }]
-
-        const user = users.find((user) => user.id === Number(id));
+        const user = getUser(Number(id));
         if (!user) return empty;
 
-        const role = roles.find((role) => role.id === user.role);
+        const role = getRole(user.role)
         if (!role) return empty;
 
         return {

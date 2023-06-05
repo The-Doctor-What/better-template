@@ -1,7 +1,7 @@
 import {Layout, Link} from "@/components";
 import stylesError from "@/styles/error.module.css";
 
-export default function Error() {
+export default function ErrorPage() {
     return (
         <Layout title={"Страница не найдена"}>
             <section className={`${stylesError.errorSection} center flex-column`}>

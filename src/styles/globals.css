@@ -6,15 +6,30 @@
     --black: #111111;
     --gray: #23272A;
     --light-gray: #76767c;
+    --light-gray2: #b9bbbe;
     --dark-gray: #2C2F33;
     --dark-gray2: #36393F;
     --white: #FFFFFF;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--dark-gray);
+    border-radius: 9px;
+}
+
 body {
     background-color: var(--black);
     color: var(--white);
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
 }
@@ -27,6 +42,10 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .center {

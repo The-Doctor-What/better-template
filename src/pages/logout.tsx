@@ -1,7 +1,7 @@
 import {Layout, Link} from "@/components";
 import stylesError from "@/styles/error.module.css";
 
-export default function Logout() {
+export default function LogoutPage() {
     return (
         <Layout title={"Выход"}>
             <section className={`${stylesError.errorSection} center flex-column`}>

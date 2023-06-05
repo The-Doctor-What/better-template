@@ -2,7 +2,7 @@ import {Layout, Link} from "@/components";
 import stylesAuth from "@/styles/auth.module.css";
 import stylesComponents from "@/styles/components.module.css";
 
-export default function Auth() {
+export default function AuthPage() {
     return (
         <Layout title="Авторизация">
             <section className={`flex-row ${stylesAuth.authSection}`}>

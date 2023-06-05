@@ -85,7 +85,7 @@ export const getServerSideProps: GetServerSideProps<ProfileEdit> = async (ctx) =
         props: {
             user: null,
             sender: {
-                access: 6,
+                access: 5,
                 self: true,
                 token: null,
             },
@@ -110,7 +110,7 @@ export const getServerSideProps: GetServerSideProps<ProfileEdit> = async (ctx) =
             id: 1,
             name: "Developer",
             icon: "code",
-            access: 6
+            access: 5
         }]
 
         const user = users.find((user) => user.id === Number(id));

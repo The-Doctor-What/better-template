@@ -22,13 +22,13 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 700px;
 }
 
 .profileInfo {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    width: 400px;
 }
 
 .profile .data p {
@@ -38,5 +38,6 @@
 
 .profileActions {
     align-items: flex-end;
-    width: 100%;
+    margin-right: 0;
+    width: 300px;
 }
