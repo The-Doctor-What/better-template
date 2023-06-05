@@ -2,7 +2,7 @@ const users = [
     {
         id: 1,
         name: "Mary Wilson",
-        avatar: "https://137.74.244.142/uploads/posts/2022-03/thumbs/1646760865_26-adonius-club-p-devushka-za-kompyuterom-art-34.jpg",
+        avatar: "https://cs11.pikabu.ru/post_img/2019/07/21/1/1563661747155330628.jpg",
         role: 1,
         email: "better@template.com",
         phone: "+7 (999) 999-99-99",
