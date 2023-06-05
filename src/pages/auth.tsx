@@ -1,25 +1,41 @@
 import {Layout, Link} from "@/components";
 import stylesAuth from "@/styles/auth.module.css";
-import stylesInput from "@/styles/input.module.css";
-import stylesButton from "@/styles/button.module.css";
+import stylesComponents from "@/styles/components.module.css";
 
 export default function Auth() {
     return (
         <Layout title="Авторизация">
-            <section className="center flex-column">
-                <form className={`center flex-column ${stylesAuth.authForm}`}>
-                    <h1>Авторизация</h1>
+            <section className={`flex-row ${stylesAuth.authSection}`}>
+                <form className={`center flex-column ${stylesAuth.regForm}`}>
+                    <h1>Регистрация</h1>
                     <div className="center flex-column">
-                        <div className={stylesInput.inputHolder}>
-                            <input type="text" placeholder="Логин" className={stylesInput.input} required/>
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="text" placeholder="Ваше имя" className={stylesComponents.input} required/>
                         </div>
-                        <div className={stylesInput.inputHolder}>
-                            <input type="password" placeholder="Пароль" className={stylesInput.input} required/>
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="email" placeholder="Электронная почта" className={stylesComponents.input} required/>
                         </div>
-                        <Link href="/" icon="user-plus">Зарегистрироваться</Link>
-                        <button className={stylesButton.button}><i className="fa-solid fa-sign-in"></i>⠀Войти</button>
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="password" placeholder="Пароль" className={stylesComponents.input} required/>
+                        </div>
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="password" placeholder="Повторите пароль" className={stylesComponents.input} required/>
+                        </div>
+                        <button className={stylesComponents.button}><i className="fa-solid fa-sign-in"></i>⠀Зарегистрироваться</button>
                     </div>
-                    <p className="bold">Или войдите с помощью:</p>
+                </form>
+                <form className={`center flex-column ${stylesAuth.authForm}`}>
+                    <h1>Вход в аккаунт</h1>
+                    <div className="center flex-column">
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="email" placeholder="Электронная почта" className={stylesComponents.input} required/>
+                        </div>
+                        <div className={stylesComponents.inputHolder}>
+                            <input type="password" placeholder="Пароль" className={stylesComponents.input} required/>
+                        </div>
+                        <button className={stylesComponents.button}><i className="fa-solid fa-sign-in"></i>⠀Войти</button>
+                    </div>
+                    <p className="bold">Или используйте:</p>
                     <div className="center flex-row">
                         <Link href="/" iconGroup="brands" icon="google"></Link>
                         <Link href="/" iconGroup="brands" icon="github"></Link>

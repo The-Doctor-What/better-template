@@ -1,7 +1,26 @@
-.authForm {
+.authForm, .regForm {
     background-color: var(--dark-gray);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
     width: fit-content;
+}
+
+.regForm {
+    border-bottom-left-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+.authForm {
+    border-bottom-right-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: var(--dark-gray2);
+}
+
+@media (max-width: 500px) {
+    .authSection {
+        flex-direction: column;
+    }
+    .authForm, .regForm {
+        border-radius: 9px;
+    }
 }

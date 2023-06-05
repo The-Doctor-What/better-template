@@ -1,6 +1,7 @@
 .text {
     color: var(--light-gray);
     font-weight: bold;
+    text-align: center;
 }
 
 .errorSection {

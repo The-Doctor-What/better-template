@@ -6,7 +6,7 @@
 }
 
 .headerButton:hover {
-    color: var(--accent);
+    color: var(--light-gray);
     transition: color 0.2s ease-in-out;
 }
 

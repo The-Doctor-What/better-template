@@ -1,0 +1,42 @@
+.profile {
+    display: flex;
+    width: 900px;
+    border: solid 2px var(--gray);
+    background: var(--dark-gray);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.profile h1, .profile h2, .profile h3, .profile h4, .profile h5, .profile h6, .profile p {
+    margin: 10px;
+}
+
+.profile img {
+    height: 18rem;
+    width: 12rem;
+    object-fit: cover;
+}
+
+.profileInfo, .profileActions {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 700px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.profile .data p {
+    color: #ccc;
+    margin-top: .5rem;
+}
+
+.profileActions {
+    align-items: flex-end;
+    width: 100%;
+}

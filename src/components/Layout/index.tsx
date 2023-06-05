@@ -6,9 +6,10 @@ import {HeaderButton} from "@/components";
 export type LayoutProps = {
     title?: string;
     children?: React.ReactNode;
+    className?: string;
 }
 
-export default function Layout({children, title}: LayoutProps) {
+export default function Layout({children, title, className}: LayoutProps) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://example.com";
     const meta = {
         url: baseUrl,
@@ -33,18 +34,14 @@ export default function Layout({children, title}: LayoutProps) {
             <header className={stylesHeader.header}>
                 <nav>
                     <HeaderButton href="/" icon="home">Главная</HeaderButton>
-                    <HeaderButton href="/" icon="basket-shopping">Товары</HeaderButton>
                 </nav>
                 <nav>
                     <HeaderButton href="/auth" icon="right-to-bracket">Авторизация</HeaderButton>
-                    <HeaderButton href="/" icon="cart-shopping">Корзина</HeaderButton>
-                    <HeaderButton href="/" icon="clock-rotate-left">История заказов</HeaderButton>
-                    <HeaderButton href="/" icon="gear">Управления</HeaderButton>
-                    <HeaderButton href="/" icon="user">Профиль</HeaderButton>
-                    <HeaderButton href="/" icon="right-from-bracket">Выйти</HeaderButton>
+                    <HeaderButton href="/profile/1" icon="user">Профиль</HeaderButton>
+                    <HeaderButton href="/logout" icon="right-from-bracket">Выйти</HeaderButton>
                 </nav>
             </header>
-            <main className={stylesHeader.main}>
+            <main className={className ? className : "center flex-column"}>
                 {children}
             </main>
         </div>
