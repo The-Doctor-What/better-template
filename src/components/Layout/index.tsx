@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import stylesHeader from './header.module.css'
-import React from "react";
+import stylesModuleWindow from "./window.module.css";
+import stylesComponents from "@/styles/components.module.css";
+import React, {useState} from "react";
 import {HeaderButton} from "@/components";
 
 export type LayoutProps = {
@@ -18,8 +20,18 @@ export default function Layout({children, title, className}: LayoutProps) {
         image: baseUrl + "/avatar.jpg"
     }
 
+    const [windowOpen, setWindowOpen] = useState(false)
+    const [windowTitle, setWindowTitle] = useState("")
+    const [windowContent, setWindowContent] = useState("")
+
+    function openWindow(title: any, content: any) {
+        setWindowOpen(true)
+        setWindowTitle(title)
+        setWindowContent(content)
+    }
+
     return (
-        <div>
+        <>
             <Head>
                 <title>{meta.title}</title>
                 <meta name="description" content={meta.description}/>
@@ -31,6 +43,7 @@ export default function Layout({children, title, className}: LayoutProps) {
                 <meta property="og:description" content={meta.description}/>
                 <meta property="og:image" content={meta.image}/>
             </Head>
+            <></>
             <header className={stylesHeader.header}>
                 <nav>
                     <HeaderButton href="/" icon="home">Главная</HeaderButton>
@@ -43,7 +56,24 @@ export default function Layout({children, title, className}: LayoutProps) {
             </header>
             <main className={className ? className : "center flex-column"}>
                 {children}
+                {windowOpen && <section className={`${stylesModuleWindow.moduleWindowHolder}`}>
+                    <div className={stylesModuleWindow.moduleWindow}>
+                        <div className={stylesModuleWindow.moduleWindowHeader}>
+                            <p id="module-window-title">{windowTitle}</p>
+                        </div>
+                        <div className={stylesModuleWindow.moduleWindowContent}>
+                            <p id="module-window-message">{windowContent}</p>
+                        </div>
+                        <div className={stylesModuleWindow.moduleWindowFooter}>
+                            <button id="module-window-button" onClick={() => setWindowOpen(false)}
+                                    className={stylesComponents.button}>
+                                <i className="fa-solid fa-xmark" onClick={() => setWindowOpen(false)}></i>
+                                ⠀Закрыть
+                            </button>
+                        </div>
+                    </div>
+                </section>}
             </main>
-        </div>
+        </>
     )
 }
