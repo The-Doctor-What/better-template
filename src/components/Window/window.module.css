@@ -18,7 +18,7 @@
     width: 500px;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--dark-gray);
+    background-color: var(--elements-background);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -28,8 +28,8 @@
 }
 
 .moduleWindowContent {
-    border-top: 1px solid var(--dark-gray2);
-    border-bottom: 1px solid var(--dark-gray2);
+    border-top: 1px solid var(--elements-background2);
+    border-bottom: 1px solid var(--elements-background2);
     font-size: 1.2rem;
     padding: 1rem;
 }

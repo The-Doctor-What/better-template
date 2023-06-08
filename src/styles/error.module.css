@@ -1,11 +1,11 @@
 .text {
-    color: var(--light-gray);
+    color: var(--active-accent);
     font-weight: bold;
     text-align: center;
 }
 
 .errorSection {
-    background-color: var(--dark-gray);
+    background-color: var(--elements-background);
     border-radius: 0.5rem;
     padding: 1rem;
     margin: 1rem;

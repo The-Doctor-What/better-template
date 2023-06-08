@@ -1,11 +1,11 @@
 .input {
     width: 100%;
     height: 40px;
-    border: 1px solid var(--gray);
-    color: var(--white);
+    border: 1px solid var(--accent);
+    color: var(--text-color);
     border-radius: 5px;
     padding: 0 10px;
-    background: var(--gray);
+    background: var(--accent);
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
@@ -14,7 +14,7 @@
 }
 
 .input:focus {
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--active-accent);
     transition: all 0.3s ease;
 }
 
@@ -27,19 +27,19 @@
 .select {
     border-radius: .5rem;
     padding: .5rem;
-    border: var(--dark-gray2) 2px solid;
-    background: var(--dark-gray2);
+    border: var(--elements-background2) 2px solid;
+    background: var(--elements-background2);
     min-width: 6rem;
     font-size: .75rem;
-    color: var(--white);
+    color: var(--text-color);
 }
 
 .textarea {
     border-radius: .5rem;
     padding: .5rem;
-    border: var(--dark-gray2) 2px solid;
-    background: var(--dark-gray2);
+    border: var(--elements-background2) 2px solid;
+    background: var(--elements-background2);
     min-width: 6rem;
     font-size: .75rem;
-    color: var(--white);
+    color: var(--text-color);
 }

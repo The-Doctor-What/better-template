@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-gray);
+    background-color: var(--elements-background);
     margin: 15px;
     padding: 15px;
     border-radius: 16px;
@@ -33,10 +33,10 @@
 }
 
 .profile {
-    background: var(--dark-gray);
+    background: var(--elements-background);
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px;
     border-radius: 9px;
@@ -45,7 +45,7 @@
 }
 
 .profile:hover {
-    background-color: var(--dark-gray2);
+    background-color: var(--elements-background2);
 }
 
 .profile img {

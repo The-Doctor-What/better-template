@@ -1,10 +1,10 @@
 .button {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-color);
     margin: 5px;
     font-weight: bold;
     font-size: 16px;
-    background-color: var(--gray);
+    background-color: var(--accent);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     border: none;
@@ -12,6 +12,6 @@
 }
 
 .button:hover {
-    color: var(--light-gray);
+    color: var(--active-accent);
     transition: color 0.2s ease-in-out;
 }

@@ -1,8 +1,8 @@
 .profile {
     display: flex;
     width: 900px;
-    border: solid 2px var(--gray);
-    background: var(--dark-gray);
+    border: solid 2px var(--accent);
+    background: var(--elements-background);
     border-radius: 16px;
     overflow: hidden;
     margin: 1rem 0;
@@ -22,11 +22,11 @@
 
 .profileTitle a {
     text-decoration: none;
-    color: var(--light-gray);
+    color: var(--active-accent);
 }
 
 .profileTitle a:hover {
-    color: var(--light-gray2);
+    color: var(--active-accent2);
 }
 
 .profile h1, .profile h2, .profile h3, .profile h4, .profile h5, .profile h6, .profile p {
@@ -65,14 +65,14 @@
 
 .profileMini {
      margin: 20px;
-     border: var(--gray) 2px solid;
-     background: var(--dark-gray);
+     border: var(--accent) 2px solid;
+     background: var(--elements-background);
      padding: .75rem 1.25rem;
      display: flex;
      gap: 1rem;
      align-items: center;
      border-radius: .75rem;
-     color: var(--white);
+     color: var(--text-color);
      text-decoration: none;
  }
 
@@ -90,14 +90,14 @@
 }
 
 .profileMini .profileInfo h3 {
-    color: var(--white);
+    color: var(--text-color);
     font-size: 1.25rem;
     font-weight: 800;
     margin: 0;
 }
 
 .profileMini .profileInfo p {
-    color: var(--light-gray2);
+    color: var(--active-accent2);
     margin: 0;
     font-size: .75rem;
 }
@@ -107,12 +107,12 @@
 }
 
 .profileMini:active {
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .profileMini:hover {
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
 }
 

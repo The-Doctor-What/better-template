@@ -1,12 +1,12 @@
 .headerButton {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-color);
     margin: 5px;
     font-weight: bold;
 }
 
 .headerButton:hover {
-    color: var(--light-gray);
+    color: var(--active-accent);
     transition: color 0.2s ease-in-out;
 }
 

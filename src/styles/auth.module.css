@@ -1,5 +1,5 @@
 .authForm, .regForm {
-    background-color: var(--dark-gray);
+    background-color: var(--elements-background);
     padding: 1rem 0;
     margin: 1rem 0;
     width: fit-content;
@@ -13,7 +13,7 @@
 .authForm {
     border-bottom-right-radius: 9px;
     border-top-right-radius: 9px;
-    background-color: var(--dark-gray2);
+    background-color: var(--elements-background2);
 }
 
 @media (max-width: 500px) {

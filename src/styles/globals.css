@@ -1,15 +1,14 @@
 :root {
-    --accent: #5865F2;
     --warning: #FEE75C;
     --success: #57F287;
     --error: #ED4245;
-    --black: #111111;
-    --gray: #23272A;
-    --light-gray: #76767c;
-    --light-gray2: #b9bbbe;
-    --dark-gray: #2C2F33;
-    --dark-gray2: #36393F;
-    --white: #FFFFFF;
+    --website-background: #111111;
+    --accent: #23272A;
+    --active-accent: #76767c;
+    --active-accent2: #b9bbbe;
+    --elements-background: #2C2F33;
+    --elements-background2: #36393F;
+    --text-color: #fff;
 }
 
 *::-webkit-scrollbar {
@@ -17,17 +16,17 @@
 }
 
 *::-webkit-scrollbar-track {
-    background-color: var(--black);
+    background-color: var(--website-background);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--dark-gray);
+    background-color: var(--elements-background);
     border-radius: 9px;
 }
 
 body {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--website-background);
+    color: var(--text-color);
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 16px;
