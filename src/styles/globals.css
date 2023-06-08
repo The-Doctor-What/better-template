@@ -48,8 +48,11 @@ body {
     flex-wrap: wrap;
 }
 
-.center {
+.center, .align-center {
     align-items: center;
+}
+
+.center, .justify-center {
     justify-content: center;
 }
 

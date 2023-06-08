@@ -51,3 +51,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 580px) {
+    .moduleWindow {
+        width: 80%;
+    }
+}

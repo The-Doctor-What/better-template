@@ -5,11 +5,10 @@ export type LinkProps = {
     children?: string;
     href: string;
     icon: string;
-
     iconGroup?: string;
 }
 
-export default function HeaderButton({children, href, icon, iconGroup = "solid" }: LinkProps) {
+export default function LinkButton({children, href, icon, iconGroup = "solid" }: LinkProps) {
     return (
         <Link className={stylesLink.linkButton} href={href}>
             <i className={`fa-${iconGroup} fa-${icon}`}></i>

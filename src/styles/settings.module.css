@@ -1,0 +1,69 @@
+.sections, .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-gray);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 16px;
+    height: fit-content;
+}
+
+.sections button, .socials button, .sections a {
+    width: 100%;
+    text-align: left;
+}
+
+.socials button {
+    width: 400px;
+}
+
+.sections a {
+    width: 86%;
+}
+
+.section {
+    width: 400px;
+}
+
+.avatar {
+    width: 300px;
+    border-radius: 9px;
+}
+
+.profile {
+    background: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 9px;
+    flex-direction: column;
+    width: 280px;
+}
+
+.profile:hover {
+    background-color: var(--dark-gray2);
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 9999px;
+    object-fit: cover;
+}
+
+.profile .profileInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 280px;
+    align-items: center;
+}
+
+.profile .profileInfo * {
+    margin: 0;
+}
